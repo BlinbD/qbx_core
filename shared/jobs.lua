@@ -19,7 +19,7 @@ return {
         },
 	},
 	['police'] = {
-		label = 'LSPD',
+		label = 'Capitol Police',
         type = 'leo',
 		defaultDuty = true,
 		offDutyPay = false,
@@ -47,8 +47,8 @@ return {
             },
         },
 	},
-	['bcso'] = {
-		label = 'BCSO',
+	['state'] = {
+		label = 'State Patrol',
         type = 'leo',
 		defaultDuty = true,
 		offDutyPay = false,
@@ -76,8 +76,8 @@ return {
             },
         },
 	},
-	['sasp'] = {
-		label = 'SASP',
+	['dps'] = {
+		label = 'NMDPS',
         type = 'leo',
 		defaultDuty = true,
 		offDutyPay = false,
@@ -346,4 +346,42 @@ return {
             },
         },
 	},
+	['electrician'] = {
+		label = 'Electrician',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Repair Person',
+                payment = 50
+            },
+        },
+	},
+	['repo'] = {
+		label = 'Repossession Company',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Repo Person',
+                payment = 50
+            },
+        },
+	},
+
+
+	['logger'] = {
+		label = 'Logging Company',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Logger',
+                payment = 50
+            },
+        },
+	},
+
+
+
 }
