@@ -383,5 +383,19 @@ return {
 	},
 
 
+	['butcher'] = {
+		label = 'Meat House',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Meat Worker',
+                payment = 50
+            },
+        },
+	},
+
+
+    
 
 }
