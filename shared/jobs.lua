@@ -384,7 +384,7 @@ return {
 
 
 	['butcher'] = {
-		label = 'Meat House',
+		label = 'RedBird Poultry',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
@@ -394,8 +394,97 @@ return {
             },
         },
 	},
+    ['window_cleaning'] = {
+		label = 'Tower Cleaning INC',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'Cleaner',
+                payment = 50
+            },
+        },
+	},
+    ['builder'] = {
+		label = 'Jamie Compadres Construction LLC',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'General Laborer',
+                payment = 50
+            },
+        },
+	},
+    
+
+    ['gardener'] = {
+        label = 'Gardener',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Worker',
+                payment = 50
+            },
+        },
+    },
+
+    ['dogwalker'] = {
+        label = 'Dog Walker',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Worker',
+                payment = 50
+            },
+        },
+    },
+
+    
+    ['yellow'] = {
+        label = 'yellow',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Worker',
+                payment = 50
+            },
+        },
+    },
+
+
+    
+    ['tequilala'] = {
+        label = 'yellow',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Worker',
+                payment = 50
+            },
+            [1] = {
+                name = 'Owner',
+                isboss = true,
+                payment = 50
+            },
+        },
+    },
+
+
+
 
 
     
 
+
+
+
 }
+
+
+
+

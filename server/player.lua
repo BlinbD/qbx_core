@@ -103,6 +103,17 @@ function CheckPlayerData(source, playerData)
     playerData.metadata.commandbinds = playerData.metadata.commandbinds or {}
     playerData.metadata.bloodtype = playerData.metadata.bloodtype or config.player.bloodTypes[math.random(1, #config.player.bloodTypes)]
     playerData.metadata.dealerrep = playerData.metadata.dealerrep or 0
+
+
+---- meta data for the fishing jobs
+    playerData.metadata.fishingrep = playerData.metadata.fishingrep or 0
+    playerData.metadata.magnetfishingrep = playerData.metadata.magnetfishingrep or 0
+    playerData.metadata.llegalfishing = playerData.metadata.illegalfishing or 0
+
+
+
+
+
     playerData.metadata.craftingrep = playerData.metadata.craftingrep or 0
     playerData.metadata.attachmentcraftingrep = playerData.metadata.attachmentcraftingrep or 0
     playerData.metadata.currentapartment = playerData.metadata.currentapartment or nil

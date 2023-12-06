@@ -83,7 +83,7 @@ return {
         whitelist = false, -- Enable or disable whitelist on the server
         whitelistPermission = 'admin', -- Permission that's able to enter the server when the whitelist is on
         discord = '', -- Discord invite link
-        checkDuplicateLicense = true, -- Check for duplicate rockstar license on join
+        checkDuplicateLicense = false, -- Check for duplicate rockstar license on join
         permissions = { 'god', 'admin', 'mod' }, -- Add as many groups as you want here after creating them in your server.cfg
     },
 
@@ -115,7 +115,8 @@ return {
     },
 
     giveVehicleKeys = function(src, plate)
-        return exports.qbx_vehiclekeys:GiveKeys(src, plate)
+        return exports['Renewed-Vehiclekeys']:addKey(src, plate)
+
     end,
 
     getSocietyAccount = function(accountName)

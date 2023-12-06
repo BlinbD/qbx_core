@@ -11,8 +11,8 @@ RegisterNetEvent('QBCore:Client:VehicleInfo', function(info)
     local plate = GetPlate(vehicle)
     local hasKeys = true
 
-    if GetResourceState('qb-vehiclekeys') == 'started' then
-        hasKeys = exports['qb-vehiclekeys']:HasKeys()
+    if GetResourceState('Renewed-Vehiclekeys') == 'started' then
+        hasKeys = exports['Renewed-Vehiclekeys']:hasKey()
     end
 
 
