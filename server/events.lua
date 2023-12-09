@@ -1,4 +1,6 @@
 local serverConfig = require 'config.server'.server
+local loggingConfig = require 'config.server'.logging
+local logger = require 'modules.logger'
 
 -- Event Handler
 
@@ -33,7 +35,13 @@ AddEventHandler('playerDropped', function(reason)
     if not QBX.Players[src] then return end
     GlobalState.PlayerCount -= 1
     local player = QBX.Players[src]
-    TriggerEvent('qb-log:server:CreateLog', 'joinleave', 'Dropped', 'red', '**' .. GetPlayerName(src) .. '** (' .. player.PlayerData.license .. ') left..' ..'\n **Reason:** ' .. reason)
+    logger.log({
+        source = 'qbx_core',
+        webhook = loggingConfig.webhook['joinleave'],
+        event = 'Dropped',
+        color = 'red',
+        message = '**' .. GetPlayerName(src) .. '** (' .. player.PlayerData.license .. ') left..' ..'\n **Reason:** ' .. reason,
+    })
     player.Functions.Save()
     QBX.Player_Buckets[player.PlayerData.license] = nil
     QBX.Players[src] = nil
@@ -51,8 +59,7 @@ end)
 ---@param deferrals Deferrals
 local function onPlayerConnecting(name, _, deferrals)
     local src = source --[[@as string]]
-    local license
-    local identifiers = GetPlayerIdentifiers(src)
+    local license = GetPlayerIdentifierByType(src, 'license2') or GetPlayerIdentifierByType(src, 'license')
     deferrals.defer()
 
     -- Mandatory wait
@@ -61,13 +68,6 @@ local function onPlayerConnecting(name, _, deferrals)
     if serverConfig.closed then
         if not IsPlayerAceAllowed(src, 'qbadmin.join') then
             deferrals.done(serverConfig.closedReason)
-        end
-    end
-
-    for _, v in pairs(identifiers) do
-        if string.find(v, 'license2') or string.find(v, 'license') then
-            license = v
-            break
         end
     end
 
