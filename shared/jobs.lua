@@ -19,29 +19,73 @@ return {
         },
 	},
 	['police'] = {
-		label = 'Capitol Police',
+		label = 'Metro Police Division',
         type = 'leo',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             [0] = {
-                name = 'Recruit',
+                name = 'BLET Student',
                 payment = 50
             },
 			[1] = {
-                name = 'Officer',
+                name = 'MPD Trainee',
                 payment = 75
             },
 			[2] = {
-                name = 'Sergeant',
+                name = 'MPD Officer',
                 payment = 100
             },
 			[3] = {
-                name = 'Lieutenant',
+                name = 'MPD Officer First Class',
                 payment = 125
             },
-			[4] = {
-                name = 'Chief',
+            [4] = {
+                name = 'MPD Senior Officer',
+                payment = 125
+            },
+            [5] = {
+                name = 'MPD Master Officer',
+                payment = 125
+            },
+            [6] = {
+                name = 'MPD Corporal',
+                payment = 125
+            },
+            [7] = {
+                name = 'MPD Senior Corporal',
+                payment = 125
+            },
+            [8] = {
+                name = 'MPD Sergeant',
+                payment = 125
+            },
+            [9] = {
+                name = 'MPD Senior Sergeant',
+                payment = 125
+            },
+            [10] = {
+                name = 'MPD Master Sergeant',
+                payment = 125
+            },
+            [11] = {
+                name = 'MPD First Sergeant',
+                payment = 125
+            },
+            [12] = {
+                name = 'MPD Lieutenant',
+                payment = 125
+            },
+            [13] = {
+                name = 'MPD Captain',
+                payment = 125
+            },
+            [14] = {
+                name = 'MPD Deputy Chief',
+                payment = 125
+            },
+			[15] = {
+                name = 'MPD Chief',
                 isboss = true,
                 bankAuth = true,
                 payment = 150
@@ -49,29 +93,77 @@ return {
         },
 	},
 	['state'] = {
-		label = 'State Patrol',
+		label = 'State Patrol Division',
         type = 'leo',
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
             [0] = {
-                name = 'Recruit',
+                name = 'B.L.E.T Student SP',
                 payment = 50
             },
 			[1] = {
-                name = 'Officer',
+                name = 'SP Trainee',
                 payment = 75
             },
 			[2] = {
-                name = 'Sergeant',
+                name = 'SP Trooper',
                 payment = 100
             },
 			[3] = {
-                name = 'Lieutenant',
+                name = 'SP Ranger',
                 payment = 125
             },
-			[4] = {
-                name = 'Chief',
+            [4] = {
+                name = 'SP Trooper First Class',
+                payment = 125
+            },
+            [5] = {
+                name = 'SP Ranger II',
+                payment = 125
+            },
+            [6] = {
+                name = 'SP Senior Trooper',
+                payment = 125
+            },
+            [7] = {
+                name = 'SP Ranger III',
+                payment = 125
+            },
+            [8] = {
+                name = 'SP Master Trooper',
+                payment = 125
+            },
+            [9] = {
+                name = 'SP Ranger IV',
+                payment = 125
+            },
+            [10] = {
+                name = 'SP Sergeant',
+                payment = 125
+            },
+            [11] = {
+                name = 'SP Ranger Sergeant',
+                payment = 125
+            },
+            [12] = {
+                name = 'SP Senior Sergeant',
+                payment = 125
+            },
+            [13] = {
+                name = 'SP Master Sergeant',
+                payment = 125
+            },
+            [14] = {
+                name = 'SP First Sergeant',
+                payment = 125
+            },
+            [15] = {
+                name = 'SP Lieutenant',
+                payment = 125
+            },
+			[16] = {
+                name = 'SP Captain',
                 isboss = true,
                 bankAuth = true,
                 payment = 150
@@ -85,7 +177,7 @@ return {
 		offDutyPay = false,
 		grades = {
             [0] = {
-                name = 'Recruit',
+                name = 'DPS',
                 payment = 50
             },
 			[1] = {
@@ -108,8 +200,55 @@ return {
             },
         },
 	},
+    ['doc'] = {
+		label = 'NMDOC',
+        type = 'leo',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            [0] = {
+                name = 'NMDOC Trainee',
+                payment = 50
+            },
+			[1] = {
+                name = 'NMDOC CO',
+                payment = 75
+            },
+			[2] = {
+                name = 'NMDOC CO II',
+                payment = 100
+            },
+			[3] = {
+                name = 'NMDOC CO III',
+                payment = 125
+            },
+            [4] = {
+                name = 'NMDOC CO Sergeant',
+                payment = 125
+            },
+            [5] = {
+                name = 'NMDOC CO Lieutenant',
+                payment = 125
+            },
+
+            [6] = {
+                name = 'NMDOC CO Captain',
+                payment = 125
+            },
+            [7] = {
+                name = 'NMDOC Asst Warden',
+                payment = 125
+            },
+			[8] = {
+                name = 'NMDOC Warden',
+                isboss = true,
+                bankAuth = false,
+                payment = 150
+            },
+        },
+	},
 	['ambulance'] = {
-		label = 'EMS',
+		label = 'ARM',
         type = 'ems',
 		defaultDuty = true,
 		offDutyPay = false,
@@ -484,6 +623,31 @@ return {
 
 
 
+
+    ['metal_detector'] = {
+        label = 'Metal Detecting Society',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Hobbyist',
+                payment = 50
+            },
+        },
+    },
+
+
+    ['diver'] = {
+        label = 'Diving Crew',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Hobbyist',
+                payment = 50
+            },
+        },
+    },
 
 
     

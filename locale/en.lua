@@ -30,7 +30,7 @@ local Translations = {
         character_deleted_citizenid = 'You successfully deleted the character with Citizen ID %{citizenid}.'
     },
     info = {
-        received_paycheck = 'You received your paycheck of $%{value}',
+        received_paycheck = 'Your paycheck of $%{value} is at the Pacific Bank',
         job_info = 'Job: %{value} | Grade: %{value2} | Duty: %{value3}',
         gang_info = 'Gang: %{value} | Grade: %{value2}',
         on_duty = 'You are now on duty!',

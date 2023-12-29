@@ -26,8 +26,9 @@ CreateThread(function()
 end)
 
 local function sendPaycheck(player, payment)
-    player.Functions.AddMoney('bank', payment)
+    exports['novus_pay']:AddToPaycheck(player.PlayerData.citizenid, payment)
     Notify(player.PlayerData.source, Lang:t('info.received_paycheck', {value = payment}))
+
 end
 
 local function pay(player)
