@@ -153,17 +153,19 @@ lib.addCommand('dv', {
 }, function(source)
     local ped = GetPlayerPed(source)
     local pedCar = GetVehiclePedIsIn(ped, false)
-
+   
     if not pedCar then
         local vehicle = lib.callback.await('qbx_core:client:getNearestVehicle', source)
 
         if vehicle then
             pedCar = NetworkGetEntityFromNetworkId(vehicle)
+            plate = GetPlate(NetworkGetEntityFromNetworkId(vehicle))
         end
     end
 
     if pedCar and DoesEntityExist(pedCar) then
         DeleteEntity(pedCar)
+        exports['Renewed-Vehiclekeys']:removeKey(source, plate)
     end
 end)
 

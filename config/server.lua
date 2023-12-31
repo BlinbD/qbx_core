@@ -7,13 +7,13 @@ return {
         ---@type Money
         moneyTypes = { cash = 500, bank = 5000, crypto = 0 }, -- type = startamount - Add or remove money types for your server (for ex. blackmoney = 0), remember once added it will not be removed from the database!
         dontAllowMinus = { 'cash', 'crypto' }, -- Money that is not allowed going in minus
-        paycheckTimeout = 30, -- The time in minutes that it will give the paycheck
+        paycheckTimeout = 20, -- The time in minutes that it will give the paycheck
         paycheckSociety = false -- If true paycheck will come from the society account that the player is employed at, requires qb-management
     },
 
     player = {
-        hungerRate = 1.0, -- Rate at which hunger goes down.
-        thirstRate = 1.0, -- Rate at which thirst goes down.
+        hungerRate = 9.0, -- Rate at which hunger goes down.
+        thirstRate = 9.0, -- Rate at which thirst goes down.
 
         ---@enum BloodType
         bloodTypes = {
