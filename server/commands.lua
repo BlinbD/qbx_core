@@ -145,6 +145,7 @@ lib.addCommand('car', {
     local netId = SpawnVehicle(source, args[Lang:t("command.car.params.model.name")], nil, true)
     local plate = GetPlate(NetworkGetEntityFromNetworkId(netId))
     config.giveVehicleKeys(source, plate)
+    
 end)
 
 lib.addCommand('dv', {
@@ -159,13 +160,12 @@ lib.addCommand('dv', {
 
         if vehicle then
             pedCar = NetworkGetEntityFromNetworkId(vehicle)
-            plate = GetPlate(NetworkGetEntityFromNetworkId(vehicle))
         end
     end
 
     if pedCar and DoesEntityExist(pedCar) then
         DeleteEntity(pedCar)
-        exports['Renewed-Vehiclekeys']:removeKey(source, plate)
+      
     end
 end)
 
