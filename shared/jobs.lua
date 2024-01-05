@@ -649,10 +649,29 @@ return {
         },
     },
 
+    ['tow'] = {
+        label = 'Lizard Towing',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Tow Worker',
+                payment = 50
+            },
+        },
+    },
 
-    
-
-
+    ['pcrepairs'] = {
+        label = 'PC Repairs LLC',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            [0] = {
+                name = 'Employee',
+                payment = 50
+            },
+        },
+    },
 
 
 }
